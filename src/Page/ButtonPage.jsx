@@ -1,4 +1,4 @@
-import Button from "./Component/Button";
+import Button from "../Component/Button";
 import {GoBell,GoAlert} from 'react-icons/go';
 import {FiActivity} from 'react-icons/fi';
 import {MdArticle} from 'react-icons/md';
@@ -7,7 +7,7 @@ import {WiDaySnowThunderstorm,WiNightAltHail} from 'react-icons/wi';
 
 
 
-const App=()=>{
+const ButtonPage=()=>{
     const handleClick=()=>{
         console.log("Hey i am here onlclick");
     }
@@ -35,14 +35,9 @@ const App=()=>{
             </div>
             <div>
             <Button rounded> <WiDaySnowThunderstorm/> Rounded</Button>
-            </div>
-            
-            
-            
-            
-            
+            </div>  
         </div>
     )
 }
 
-export default App;
+export default ButtonPage;
