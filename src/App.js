@@ -1,32 +1,28 @@
-import Accordion from "./Component/Accordion";
+import { useState } from "react";
+import DropDown from "./Component/DropDown";
 
-const App=()=>{
+const App = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
 
-    const items=[
-        {
-            id:1,
-            label:'Bio Of Aman Purohit',
-            content:'He is hardworking and naught Boy He is hardworking and naught Boy He is hardworking and naught Boy'
-        },
-        {
-            id:2,
-            label:'Bio Of Krishna',
-            content:'He is supreme Lord and the Father of unlimited multiverse He is supreme Lord and the Father of unlimited multiverse He is supreme Lord and the Father of unlimited multiverse He is supreme Lord and the Father of unlimited multiverse'
-        },
-        {
-            id:3,
-            label:'Bio Of Angad',
-            content:'He is hardworking and naught BoyHe is hardworking and naught BoyHe is hardworking and naught BoyHe is hardworking and naught BoyHe is hardworking and naught BoyHe is hardworking and naught Boy'
-        },
-    ]
+  const options = [
+    { label: "Red", value: "red" },
+    { label: "Blue", value: "blue" },
+    { label: "Yellow", value: "yellow" },
+  ];
 
-    return (
-        <div>
-            <Accordion item={items}/>
-        </div>
-    )
-        
-    
-}
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+  };
+
+  return (
+    <div>
+      <DropDown
+        options={options}
+        selectedOption={selectedOption}
+        onChange={handleOptionClick}
+      />
+    </div>
+  );
+};
 
 export default App;
