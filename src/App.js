@@ -18,7 +18,7 @@ const App = () => {
     <div>
       <DropDown
         options={options}
-        selectedOption={selectedOption}
+        value={selectedOption}
         onChange={handleOptionClick}
       />
     </div>
